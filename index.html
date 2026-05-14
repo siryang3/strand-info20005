@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STRAND — Designed for everyday elegance</title>
+  <meta name="description" content="A calmer and clearer way to shop bags and accessories.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+  <div data-slot="header"></div>
+
+  <main>
+    <section class="container home-hero">
+      <div class="home-hero__copy">
+        <div class="home-hero__eyebrow">NEW SEASON</div>
+        <h1 class="home-hero__title">Designed for everyday elegance</h1>
+        <p class="home-hero__sub">
+          A calmer and clearer way to shop bags and accessories.
+        </p>
+        <a class="btn btn--primary btn--pill" href="search.html">Explore New Arrivals</a>
+      </div>
+      <div class="home-hero__media">
+        <img src="assets/img/pokemon-tote-hero.png" alt="Featured limited edition tote">
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2 class="section__title">Shop by Category</h2>
+      <div class="category-grid" data-slot="categories"></div>
+    </section>
+
+    <section class="container section">
+      <div class="featured-edit">
+        <div>
+          <div class="home-hero__eyebrow">FEATURED COLLECTION</div>
+          <h3 class="featured-edit__title">Everyday Edit</h3>
+          <p class="featured-edit__sub">
+            Refined shapes for work, travel, and daily use.
+          </p>
+        </div>
+        <a class="btn btn--primary btn--pill" href="search.html?cat=bags">View Collection</a>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2 class="section__title">New Arrivals</h2>
+      <div class="product-grid" data-slot="new-arrivals"></div>
+    </section>
+  </main>
+
+  <div data-slot="footer"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

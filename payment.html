@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment Details — STRAND</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+  <div data-slot="header"></div>
+
+  <main class="container">
+    <a class="back-link" href="cart.html">Back</a>
+    <section class="payment-page">
+      <h1 class="payment-page__title">Payment Details</h1>
+      <form data-slot="payment-form" novalidate>
+        <div class="field">
+          <label class="field__label" for="fullName">Full name</label>
+          <input class="field__input" id="fullName" name="fullName"
+                 type="text" placeholder="name" autocomplete="name">
+          <span class="field__error" aria-live="polite"></span>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="cardNumber">Card number</label>
+          <input class="field__input" id="cardNumber" name="cardNumber"
+                 type="text" inputmode="numeric" placeholder="number"
+                 autocomplete="cc-number">
+          <span class="field__error" aria-live="polite"></span>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="address">Address</label>
+          <select class="field__select" id="address" name="address" autocomplete="shipping">
+            <option value="" disabled selected>Choose delivery</option>
+            <option value="Jne Express">Jne Express</option>
+            <option value="Standard Post">Standard Post (3–5 days)</option>
+            <option value="Express Post">Express Post (1–2 days)</option>
+            <option value="Click &amp; Collect">Click &amp; Collect</option>
+          </select>
+          <span class="field__error" aria-live="polite"></span>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="postCode">PostCode</label>
+          <input class="field__input" id="postCode" name="postCode"
+                 type="text" inputmode="numeric" maxlength="4"
+                 autocomplete="postal-code">
+          <span class="field__error" aria-live="polite"></span>
+        </div>
+
+        <button class="btn btn--primary btn--block btn--lg" type="submit">
+          Confirm Payment
+        </button>
+        <p class="payment-page__secure">Secure checkout</p>
+      </form>
+    </section>
+  </main>
+
+  <div data-slot="footer"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/payment.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Confirmed — STRAND</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+  <div data-slot="header"></div>
+
+  <main class="container">
+    <a class="back-link" href="index.html">Back</a>
+    <section class="confirm-page">
+      <h1 class="confirm-page__title">Order Confirmed</h1>
+
+      <div class="confirm-illustration" aria-hidden="true">
+        <!-- Inline SVG: open gift box matching A2 mock -->
+        <svg viewBox="0 0 160 160" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" width="160" height="160">
+          <!-- Sparkle accents -->
+          <path d="M30 28 L34 34 M34 28 L30 34" stroke="#B88B6A"/>
+          <path d="M130 26 L134 30 M134 26 L130 30" stroke="#5DC9B0"/>
+          <path d="M124 110 L128 114 M128 110 L124 114" stroke="#B88B6A"/>
+          <!-- Lid (open, tilted) -->
+          <polygon points="40,58 120,58 110,42 50,42" fill="#FFFFFF"/>
+          <!-- Box body -->
+          <polygon points="38,70 122,70 116,130 44,130" fill="#5DC9B0"/>
+          <!-- Inner shadow -->
+          <polygon points="48,70 112,70 80,88" fill="#1A1A1A" fill-opacity="0.15" stroke="none"/>
+          <!-- Ribbon vertical -->
+          <line x1="80" y1="70" x2="80" y2="130" stroke="#1A1A1A"/>
+        </svg>
+      </div>
+
+      <p class="confirm-page__thanks">Thank you for your purchase</p>
+      <div class="confirm-page__order" data-slot="order-no">Order #20481</div>
+      <div>
+        <a class="btn btn--primary btn--lg" href="index.html">Continue Shopping</a>
+      </div>
+    </section>
+  </main>
+
+  <div data-slot="footer"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/confirm.js"></script>
+</body>
+</html>

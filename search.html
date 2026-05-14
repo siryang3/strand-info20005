@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search Results — STRAND</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+  <div data-slot="header"></div>
+
+  <main class="container">
+    <a class="back-link" href="index.html">Back</a>
+
+    <header class="search-header">
+      <h1 class="search-header__title">Search Results</h1>
+      <p class="search-header__sub" data-slot="search-sub">All items</p>
+      <p class="search-header__count" data-slot="search-count">0 items</p>
+    </header>
+
+    <label class="search-bar" for="search-input">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"/>
+        <line x1="16.5" y1="16.5" x2="21" y2="21"/>
+      </svg>
+      <input id="search-input" type="search" placeholder="Search bags"
+             data-search-input autocomplete="off">
+    </label>
+
+    <div class="search-controls">
+      <button class="btn btn--secondary btn--pill" type="button" data-filter>Filter</button>
+      <button class="btn btn--secondary btn--pill" type="button" data-sort>Sort</button>
+    </div>
+
+    <section class="product-grid" data-slot="search-results"></section>
+  </main>
+
+  <div data-slot="footer"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/search.js"></script>
+</body>
+</html>
