@@ -64,9 +64,20 @@
     // Bind Add to Bag
     const addBtn = root.querySelector("[data-add-to-bag]");
     if (addBtn) {
+      let resetTimer = null;
       addBtn.addEventListener("click", function () {
         window.STRAND_CART.add(product.id, 1);
         window.STRAND_APP.toast(`Added "${product.name}" to bag`);
+
+        // Visual feedback on the button itself: confirm the action
+        // without making the user look up at the cart badge.
+        addBtn.classList.add("btn--added");
+        addBtn.textContent = "Added ✓";
+        clearTimeout(resetTimer);
+        resetTimer = setTimeout(function () {
+          addBtn.classList.remove("btn--added");
+          addBtn.textContent = "Add to Bag";
+        }, 1200);
       });
     }
   }

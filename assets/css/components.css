@@ -125,6 +125,15 @@
   background: var(--brown-deep);
 }
 
+/* Confirmed state after "Add to Bag" — brief deep-brown pulse. */
+.btn--added {
+  background: var(--mint-accent);
+  color: var(--text-inverse);
+}
+.btn--added:hover {
+  background: var(--mint-accent);
+}
+
 .btn--secondary {
   background: var(--bg-card);
   color: var(--text-primary);
