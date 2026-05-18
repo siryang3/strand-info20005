@@ -78,12 +78,27 @@
     if (searchInput) searchInput.value = state.query;
   }
 
+  function syncURL() {
+    const params = new URLSearchParams();
+    if (state.query) params.set("q", state.query);
+    if (state.cat)   params.set("cat", state.cat);
+    const qs = params.toString();
+    history.replaceState(null, "", qs ? "?" + qs : location.pathname);
+  }
+
   function bindEvents() {
     const input = document.querySelector("[data-search-input]");
     if (input) {
       input.addEventListener("input", function (e) {
         state.query = e.target.value;
+        syncURL();
         render();
+      });
+      input.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          input.blur(); // dismiss the on-screen keyboard on mobile
+        }
       });
     }
 
@@ -94,6 +109,7 @@
         const i = order.indexOf(state.sort);
         state.sort = order[(i + 1) % order.length];
         btn.textContent = labelFor(state.sort);
+        syncURL();
         render();
       });
     });
@@ -107,6 +123,7 @@
         btn.textContent = state.cat
           ? "Filter: " + capitalise(state.cat)
           : "Filter";
+        syncURL();
         render();
       });
     });
