@@ -13,6 +13,22 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Respect users who asked the OS to reduce motion. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Visible focus ring for keyboard navigation. */
+:focus-visible {
+  outline: 2px solid var(--brown-deep);
+  outline-offset: 2px;
+}
+
 body {
   margin: 0;
   font-family: var(--font-body);
