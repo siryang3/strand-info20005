@@ -43,6 +43,15 @@
         <h1 class="product-info__name">${product.name}</h1>
         <div class="product-info__price">$${product.price}</div>
         <p class="product-info__desc">${product.description}</p>
+        ${product.specs ? `
+          <dl class="product-specs">
+            ${Object.keys(product.specs).map(k => `
+              <div class="product-specs__row">
+                <dt>${k}</dt><dd>${product.specs[k]}</dd>
+              </div>
+            `).join("")}
+          </dl>
+        ` : ""}
         <button class="btn btn--primary btn--block btn--lg" type="button" data-add-to-bag>
           Add to Bag
         </button>

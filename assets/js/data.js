@@ -36,6 +36,11 @@ window.STRAND_DATA = (function () {
         "A structured everyday tote designed for work, travel, and daily essentials. " +
         "Soft canvas exterior with a roomy interior pocket and reinforced handles.",
       colors:   PALETTE_TOTE,
+      specs: {
+        Material:   "Cotton canvas with leather trim",
+        Dimensions: "38 × 32 × 12 cm",
+        Care:       "Spot clean with a damp cloth"
+      },
       tags:     ["new", "tote", "everyday"]
     },
     {
@@ -51,6 +56,11 @@ window.STRAND_DATA = (function () {
         { name: "Tan",   hex: "#8C5A3C" },
         { name: "Black", hex: "#1A1A1A" }
       ],
+      specs: {
+        Material:   "Full-grain leather",
+        Dimensions: "18 × 12 × 5 cm",
+        Care:       "Condition with leather balm"
+      },
       tags: ["new", "crossbody"]
     },
     {
@@ -65,6 +75,11 @@ window.STRAND_DATA = (function () {
       colors: [
         { name: "Caramel", hex: "#B07A4D" }
       ],
+      specs: {
+        Material:   "Hand-finished leather, embroidered patches",
+        Dimensions: "34 × 28 × 14 cm",
+        Care:       "Keep dry; wipe with a soft cloth"
+      },
       tags: ["limited", "featured"]
     },
     {
@@ -80,6 +95,11 @@ window.STRAND_DATA = (function () {
         { name: "Teal",  hex: "#3E8E80" },
         { name: "Blush", hex: "#D78B85" }
       ],
+      specs: {
+        Material:   "Supple cow leather",
+        Dimensions: "19 × 10 × 2 cm",
+        Care:       "Avoid prolonged moisture"
+      },
       tags: ["wallet"]
     },
     {
@@ -96,6 +116,11 @@ window.STRAND_DATA = (function () {
         { name: "Black", hex: "#1A1A1A" },
         { name: "Tan",   hex: "#B07A4D" }
       ],
+      specs: {
+        Material:   "Leather strap, brass charm",
+        Dimensions: "11 cm drop",
+        Care:       "Polish brass with a dry cloth"
+      },
       tags: ["accessory", "gift"]
     },
     {
@@ -111,6 +136,11 @@ window.STRAND_DATA = (function () {
       colors: [
         { name: "Original", hex: "#E0413B" }
       ],
+      specs: {
+        Material:   "Assorted candy, tin packaging",
+        Dimensions: "10 × 6 × 6 cm",
+        Care:       "Store in a cool, dry place"
+      },
       tags: ["sale", "gift"]
     }
   ];
