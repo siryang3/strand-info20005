@@ -65,8 +65,14 @@
     const badge = document.querySelector("[data-cart-badge]");
     if (!badge) return;
     const count = window.STRAND_CART.itemCount();
+    const previous = Number(badge.textContent) || 0;
     badge.textContent = String(count);
     badge.classList.toggle("is-visible", count > 0);
+    if (count > previous) {
+      badge.classList.remove("is-bumped");
+      void badge.offsetWidth; // force reflow so the animation restarts
+      badge.classList.add("is-bumped");
+    }
   }
 
   // ---------- Toast ----------
