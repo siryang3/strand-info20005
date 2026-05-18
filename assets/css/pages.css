@@ -344,10 +344,12 @@
 
 @media (max-width: 768px) {
   .cart-item {
-    grid-template-columns: 90px 1fr;
-    gap: var(--space-sm);
-    padding: var(--space-sm);
+    grid-template-columns: 88px 1fr;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-sm);
   }
+  .cart-page__title { font-size: var(--fs-lg); }
+  .cart-item__qty   { font-size: var(--fs-sm); }
 }
 
 /* ============ PAYMENT ============ */
