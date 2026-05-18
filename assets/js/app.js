@@ -89,8 +89,22 @@
     return "$" + Number(n).toFixed(0);
   }
 
+  function wireBackLinks() {
+    document.querySelectorAll(".back-link").forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        // Prefer real browser history; fall back to the hard-coded
+        // href when the page was opened directly (no history to go to).
+        if (window.history.length > 1) {
+          e.preventDefault();
+          window.history.back();
+        }
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     mountChrome();
+    wireBackLinks();
     refreshCartBadge();
     window.STRAND_CART.subscribe(refreshCartBadge);
   });
