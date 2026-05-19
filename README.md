@@ -14,8 +14,8 @@ INFO20005 · Assignment 3 · UI Implementation
 
 ## Live demo & repository
 
-- **Live site**: _(GitHub Pages URL — fill in after first `git push`)_
-- **GitHub repo**: _(Repo URL — fill in after first `git push`)_
+- **Live site**: <https://siryang3.github.io/strand-info20005/>
+- **GitHub repo**: <https://github.com/siryang3/strand-info20005>
 
 ---
 
