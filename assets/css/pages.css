@@ -365,6 +365,7 @@
   }
   .cart-page__title { font-size: var(--fs-lg); }
   .cart-item__qty   { font-size: var(--fs-sm); }
+  .cart-item__price { font-weight: 600; }  /* mobile visual hierarchy boost */
 }
 
 /* ============ PAYMENT ============ */
