@@ -30,6 +30,7 @@
                     type="button"
                     role="radio"
                     aria-checked="${i === 0}"
+                    aria-label="Colour: ${c.name}"
                     data-swatch="${c.name}"
                     style="background:${c.hex};"
                     title="${c.name}">
