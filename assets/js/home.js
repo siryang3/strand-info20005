@@ -30,9 +30,15 @@
   function renderCategoryTiles() {
     const slot = document.querySelector("[data-slot='categories']");
     if (!slot) return;
-    slot.innerHTML = window.STRAND_DATA.CATEGORIES.map(c => `
-      <a class="cat-tile" href="search.html?cat=${c.id}">${c.name}</a>
-    `).join("");
+    slot.innerHTML = window.STRAND_DATA.CATEGORIES.map(c => {
+      const count = window.STRAND_DATA.listByCategory(c.id).length;
+      return `
+        <a class="cat-tile" href="search.html?cat=${c.id}">
+          ${c.name}
+          <span class="cat-tile__count">${count} item${count === 1 ? "" : "s"}</span>
+        </a>
+      `;
+    }).join("");
   }
 
   document.addEventListener("DOMContentLoaded", function () {
