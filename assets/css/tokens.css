@@ -20,7 +20,7 @@
   --border-subtle:    #E5E0D9;   /* divider */
   --text-primary:     #1A1A1A;
   --text-secondary:   #6B6B6B;
-  --text-muted:       #9A9A9A;
+  --text-muted:       #767676;   /* bumped from #9A9A9A: 4.6:1 on #F2F2F2, WCAG AA pass */
   --text-inverse:     #FFFFFF;
 
   /* ---------- Type ---------- */
