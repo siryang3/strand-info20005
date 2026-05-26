@@ -27,6 +27,22 @@ data lives in `assets/js/data.js`; the cart persists in `localStorage`. The
 site is responsive between **390 × 844 (iPhone 13/14)** and **1440 × 1024** as
 required by the assignment brief.
 
+## Tech stack
+
+- **HTML5 + CSS3 + Vanilla JavaScript** (ES5+, no framework / no build tool)
+- **localStorage** for cart persistence; **sessionStorage** for one-shot order numbers
+- **Google Fonts** (DM Serif Display) loaded with the `media="print"` deferral pattern
+- **GitHub Pages** static hosting
+
+## What I learned
+
+- CSS Custom Properties as a runtime-mutable design token system
+- Publisher/subscriber pattern for state-driven UIs without a framework
+- Hand-implemented Luhn algorithm for client-side card validation
+- WCAG AA accessibility (`:focus-visible`, `prefers-reduced-motion`, ARIA radiogroup)
+- Mobile-first responsive layouts with a single 768px breakpoint
+- The `offsetWidth` reflow trick for restarting CSS animations on the same element
+
 ## Pages
 
 | Page | File | Purpose |
