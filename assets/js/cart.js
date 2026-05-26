@@ -45,7 +45,9 @@ window.STRAND_CART = (function () {
       remove(id);
       return;
     }
-    target.qty = qty;
+    // Cap quantity at 99 to keep UI digit count consistent and prevent
+    // unrealistic bulk orders that would break row layout
+    target.qty = Math.min(qty, 99);
     write(items);
   }
 
