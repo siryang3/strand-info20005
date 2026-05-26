@@ -75,17 +75,20 @@
     if (addBtn) {
       let resetTimer = null;
       addBtn.addEventListener("click", function () {
+        // Guard against rapid double-tap during the 1.2s feedback window
+        if (addBtn.disabled) return;
+        addBtn.disabled = true;
+
         window.STRAND_CART.add(product.id, 1);
         window.STRAND_APP.toast(`Added "${product.name}" to bag`);
 
-        // Visual feedback on the button itself: confirm the action
-        // without making the user look up at the cart badge.
         addBtn.classList.add("btn--added");
         addBtn.textContent = "Added ✓";
         clearTimeout(resetTimer);
         resetTimer = setTimeout(function () {
           addBtn.classList.remove("btn--added");
           addBtn.textContent = "Add to Bag";
+          addBtn.disabled = false;
         }, 1200);
       });
     }
