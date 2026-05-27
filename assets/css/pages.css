@@ -44,7 +44,7 @@
 }
 .section__title {
   text-align: center;
-  font-size: var(--fs-xl);
+  font-size: var(--fs-2xl);        /* bumped from --fs-xl (28px) to --fs-2xl (36px) for stronger hierarchy */
   margin-bottom: var(--space-lg);
 }
 .section__eyebrow {
