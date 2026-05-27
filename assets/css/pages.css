@@ -337,8 +337,8 @@
 .cart-item__remove:hover { text-decoration: underline; }
 
 .cart-summary {
-  text-align: center;
-  padding: var(--space-lg);
+  text-align: left;                /* aligned with cart items per tutor feedback (5/26) */
+  padding: var(--space-lg) 0;
 }
 .cart-summary__label {
   font-size: var(--fs-sm);
