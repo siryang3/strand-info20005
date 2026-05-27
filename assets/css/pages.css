@@ -169,9 +169,11 @@
 /* ============ PRODUCT ============ */
 .product-page {
   display: grid;
-  grid-template-columns: 1fr 420px;
+  grid-template-columns: 1fr 1fr;        /* balanced columns so left/right whitespace matches */
   gap: var(--space-2xl);
   padding-block: var(--space-xl);
+  max-width: 1080px;                     /* keep readable line length and centre the page */
+  margin-inline: auto;
 }
 .product-gallery {
   display: flex;
