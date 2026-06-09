@@ -36,8 +36,8 @@
 .home-hero__media img {
   width: 100%;
   height: 100%;
-  object-fit: contain;            /* show the full hero product image, never crop */
-  padding: var(--space-md);       /* breathing room around the hero image */
+  object-fit: contain;             /* show the full hero product image, never crop */
+  padding: var(--space-2xl);       /* generous breathing room so the bag sits comfortably */
 }
 
 .section {
