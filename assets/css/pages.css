@@ -28,7 +28,7 @@
   max-width: 36ch;
 }
 .home-hero__media {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;             /* match the actual product image ratio (~1:1) so it fills well */
   background: var(--bg-warm);
   border-radius: var(--radius-lg);
   overflow: hidden;
